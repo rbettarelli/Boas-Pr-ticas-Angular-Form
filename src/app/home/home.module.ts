@@ -1,3 +1,5 @@
+import { MensagemModule } from './../componente/mensagem/mensagem.module';
+import { MensagemComponent } from './../componente/mensagem/mensagem.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +14,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule
+    FormsModule,
+    MensagemModule
   ], exports:[HomeComponent]
 })
 export class HomeModule { }
