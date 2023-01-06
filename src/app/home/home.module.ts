@@ -1,6 +1,6 @@
 import { MensagemModule } from './../componente/mensagem/mensagem.module';
 import { MensagemComponent } from './../componente/mensagem/mensagem.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,14 +9,10 @@ import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 
-
 @NgModule({
   declarations: [HomeComponent, LoginComponent, NovoUsuarioComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    FormsModule,
-    MensagemModule
-  ], exports:[HomeComponent]
+  imports: [CommonModule,
+    HomeRoutingModule, FormsModule, MensagemModule, ReactiveFormsModule],
+  exports: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}
