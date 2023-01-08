@@ -11,7 +11,7 @@ export class TokenService {
     return localStorage.getItem(KEY)?? '';
   }
 
-  salvatoken(token:string){
+  salvaToken(token:string){
      localStorage.setItem(KEY, token)
 
   }
