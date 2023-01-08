@@ -1,3 +1,4 @@
+import { CartaoComponent } from './../../componentes/cartao/cartao.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MensagemComponent } from './mensagem.component';
