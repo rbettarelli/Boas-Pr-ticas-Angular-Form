@@ -1,5 +1,5 @@
-import { MensagemModule } from './../componente/mensagem/mensagem.module';
-import { MensagemComponent } from './../componente/mensagem/mensagem.component';
+import { MensagemModule } from './../componentes/mensagem/mensagem.module';
+import { MensagemComponent } from './../componentes/mensagem/mensagem.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

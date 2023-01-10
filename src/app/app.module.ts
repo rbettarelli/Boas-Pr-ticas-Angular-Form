@@ -10,10 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { MenuComponent } from './componentes/menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
 
   ],
   imports: [
