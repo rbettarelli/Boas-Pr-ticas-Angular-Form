@@ -19,7 +19,7 @@ export class AutenticacaoInterceptor implements HttpInterceptor {
 
     if(this.tokenService.possuiToken()){
       const token = this.tokenService.retornaToken()
-      const headers = new HttpHeaders().append('x-acess-token', token)
+      const headers = new HttpHeaders().append('x-access-token', token)
       request = request.clone({headers})
     }
     return next.handle(request);
