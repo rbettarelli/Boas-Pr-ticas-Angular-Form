@@ -1,26 +1,24 @@
 import { HttpClient } from '@angular/common/http';
-import { environment } from './../../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Comentario } from './comentarios';
+import { environment } from 'src/environments/environment';
+import { Comentario, Comentarios } from './comentarios';
 
-const API = environment.apiURL
+const API = environment.apiURL;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ComentariosService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  buscaComentario(id: number): Observable<Comentarios> {
+    return this.http.get<Comentarios>(`${API}/photos/${id}/comments`);
+  }
 
-buscaComentario(id: number): Observable<Comentario> {
-
-  return this.http.get<Comentario>(`${API}/photos/${id}/comments`)
-}
-
-incluirComentario(id: number, commentText: string):Observable<Comentario> {
-  return this.http.post<Comentario>(`${API}/photos/${id}/comments`, {commentText})
-}
-
-
+  incluiComentario(id: number, commentText: string): Observable<Comentario> {
+    return this.http.post<Comentario>(`${API}/photos/${id}/comments`, {
+      commentText,
+    });
+  }
 }
